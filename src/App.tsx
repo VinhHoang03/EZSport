@@ -1,51 +1,92 @@
-import React, { useState } from "react";
-import { Navbar } from "./components/Navbar";
-import { HeroSection } from "./components/HeroSection";
-import { FeaturedCourts } from "./components/FeaturedCourts";
-import { SportCategories } from "./components/SportCategories";
-import { HowItWorks } from "./components/HowItWorks";
-import { Testimonials } from "./components/Testimonials";
-import { CTABanner } from "./components/CTABanner";
-import { Footer } from "./components/Footer";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 import { AuthPage } from "./pages/AuthPage";
+import { HomePage } from "./pages/HomePage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { ListingPage } from "./pages/ListingPage";
-export function App() {
-  const [currentView, setCurrentView] = useState<
-    "landing" | "auth" | "dashboard" | "listing"
-  >("landing");
-  if (currentView === "auth") {
-    return <AuthPage onBack={() => setCurrentView("landing")} />;
-  }
-  if (currentView === "dashboard") {
-    return <DashboardPage onBack={() => setCurrentView("landing")} />;
-  }
-  if (currentView === "listing") {
-    return (
-      <ListingPage
-        onAuthClick={() => setCurrentView("auth")}
-        onDashboardClick={() => setCurrentView("dashboard")}
-      />
-    );
-  }
+import { BookingHistoryPage } from "./pages/BookingHistoryPage";
+import { Navbar } from "./components/Navbar";
+
+function ProtectedRoute({ children }: { children: React.ReactNode }) {
+  const { isLoggedIn } = useAuth();
+  return isLoggedIn ? <>{children}</> : <Navigate to="/auth" />;
+}
+
+// Layout wrapper for authenticated pages
+function ProtectedLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-brand-offWhite font-sans selection:bg-brand-coral/20 selection:text-brand-navy">
-      <Navbar
-        onAuthClick={() => setCurrentView("auth")}
-        onDashboardClick={() => setCurrentView("dashboard")}
-        onFindCourtsClick={() => setCurrentView("listing")}
-      />
-
-      <main>
-        <HeroSection />
-        <SportCategories />
-        <FeaturedCourts />
-        <HowItWorks />
-        <Testimonials />
-        <CTABanner />
-      </main>
-
-      <Footer />
+    <div className="min-h-screen bg-brand-offWhite font-sans selection:bg-brand-coral/20 selection:text-brand-navy flex flex-col">
+      <Navbar />
+      {children}
     </div>
+  );
+}
+
+function AppRoutes() {
+  const { isLoggedIn } = useAuth();
+
+  return (
+    <Routes>
+      <Route path="/auth" element={<AuthPage />} />
+      <Route
+        path="/"
+        element={isLoggedIn ? <Navigate to="/home" /> : <Navigate to="/auth" />}
+      />
+      <Route
+        path="/home"
+        element={
+          <ProtectedRoute>
+            <ProtectedLayout>
+              <HomePage />
+            </ProtectedLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/listing"
+        element={
+          <ProtectedRoute>
+            <ProtectedLayout>
+              <ListingPage />
+            </ProtectedLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <ProtectedLayout>
+              <DashboardPage />
+            </ProtectedLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/bookings"
+        element={
+          <ProtectedRoute>
+            <ProtectedLayout>
+              <BookingHistoryPage />
+            </ProtectedLayout>
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  );
+}
+
+export function App() {
+  return (
+    <Router>
+      <AuthProvider>
+        <AppRoutes />
+      </AuthProvider>
+    </Router>
   );
 }
