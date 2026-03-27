@@ -1,6 +1,7 @@
-import React from 'react';
-import { MapPinIcon, CalendarIcon, ClockIcon, SearchIcon } from 'lucide-react';
-export function SearchBar() {
+import React from "react";
+import { MapPinIcon, CalendarIcon, ClockIcon, SearchIcon } from "lucide-react";
+
+export function SearchBar({ onSearch }: { onSearch?: () => void }) {
   return (
     <div className="bg-white rounded-full shadow-xl p-2 md:p-3 flex flex-col md:flex-row items-center gap-2 md:gap-0 max-w-4xl mx-auto w-full border border-brand-border relative z-10">
       {/* Location */}
@@ -13,8 +14,8 @@ export function SearchBar() {
           <input
             type="text"
             placeholder="Where do you want to play?"
-            className="w-full bg-transparent border-none outline-none text-sm text-brand-navy placeholder:text-brand-slate truncate" />
-          
+            className="w-full bg-transparent border-none outline-none text-sm text-brand-navy placeholder:text-brand-slate truncate"
+          />
         </div>
       </div>
 
@@ -41,8 +42,8 @@ export function SearchBar() {
           <CalendarIcon className="w-4 h-4 text-brand-slate group-hover:text-brand-coral transition-colors" />
           <input
             type="date"
-            className="w-full bg-transparent border-none outline-none text-sm text-brand-navy cursor-pointer" />
-          
+            className="w-full bg-transparent border-none outline-none text-sm text-brand-navy cursor-pointer"
+          />
         </div>
       </div>
 
@@ -55,19 +56,20 @@ export function SearchBar() {
           <ClockIcon className="w-4 h-4 text-brand-slate group-hover:text-brand-coral transition-colors" />
           <input
             type="time"
-            className="w-full bg-transparent border-none outline-none text-sm text-brand-navy cursor-pointer" />
-          
+            className="w-full bg-transparent border-none outline-none text-sm text-brand-navy cursor-pointer"
+          />
         </div>
       </div>
 
       {/* Search Button */}
       <button
+        onClick={onSearch}
         className="w-full md:w-auto mt-2 md:mt-0 bg-brand-coral hover:bg-[#e0484d] text-white p-4 md:px-8 md:py-4 rounded-full flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg focus:ring-4 focus:ring-brand-coral/30 outline-none"
-        aria-label="Search courts">
-        
+        aria-label="Search courts"
+      >
         <SearchIcon className="w-5 h-5" />
         <span className="md:hidden font-medium">Search</span>
       </button>
-    </div>);
-
+    </div>
+  );
 }

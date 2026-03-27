@@ -1,50 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   CircleDotIcon,
-  // Using as placeholder for Tennis ball
   DribbbleIcon,
-  // Basketball
   ActivityIcon,
-  // Padel/Squash
   WindIcon,
-  // Badminton
   GoalIcon,
-  // Football
-  VolleyballIcon // Volleyball (if exists, else fallback)
-} from 'lucide-react';
-const CATEGORIES = [
-{
-  name: 'Tennis',
-  icon: CircleDotIcon,
-  count: '124 courts'
-},
-{
-  name: 'Basketball',
-  icon: DribbbleIcon,
-  count: '86 courts'
-},
-{
-  name: 'Padel',
-  icon: ActivityIcon,
-  count: '45 courts'
-},
-{
-  name: 'Football',
-  icon: GoalIcon,
-  count: '92 courts'
-},
-{
-  name: 'Badminton',
-  icon: WindIcon,
-  count: '38 courts'
-},
-{
-  name: 'Volleyball',
-  icon: CircleDotIcon,
-  count: '24 courts'
-} // Fallback icon
-];
+} from "lucide-react";
+import { SPORT_CATEGORIES } from "../data/mockData";
+
 export function SportCategories() {
   return (
     <section className="py-16 bg-white border-y border-brand-border">
@@ -54,30 +18,39 @@ export function SportCategories() {
         </h2>
 
         <div className="flex overflow-x-auto pb-6 -mx-4 px-4 sm:mx-0 sm:px-0 gap-4 sm:gap-6 snap-x hide-scrollbar">
-          {CATEGORIES.map((category, index) => {
-            const Icon = category.icon;
+          {SPORT_CATEGORIES.map((category, index) => {
+            const icons = [
+              CircleDotIcon,
+              DribbbleIcon,
+              ActivityIcon,
+              GoalIcon,
+              WindIcon,
+              CircleDotIcon,
+            ];
+            const Icon = icons[index] || CircleDotIcon;
+
             return (
               <motion.div
                 key={category.name}
                 className="flex-none w-40 sm:w-48 group cursor-pointer snap-start"
                 initial={{
                   opacity: 0,
-                  y: 20
+                  y: 20,
                 }}
                 whileInView={{
                   opacity: 1,
-                  y: 0
+                  y: 0,
                 }}
                 viewport={{
-                  once: true
+                  once: true,
                 }}
                 transition={{
-                  delay: index * 0.1
+                  delay: index * 0.1,
                 }}
                 whileHover={{
-                  y: -4
-                }}>
-                
+                  y: -4,
+                }}
+              >
                 <div className="bg-brand-offWhite border border-brand-border rounded-2xl p-6 flex flex-col items-center justify-center text-center h-full transition-all duration-300 group-hover:border-brand-coral group-hover:shadow-md group-hover:bg-white">
                   <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm group-hover:bg-brand-coral/10 transition-colors">
                     <Icon className="w-7 h-7 text-brand-navy group-hover:text-brand-coral transition-colors" />
@@ -87,11 +60,11 @@ export function SportCategories() {
                   </h3>
                   <p className="text-sm text-brand-slate">{category.count}</p>
                 </div>
-              </motion.div>);
-
+              </motion.div>
+            );
           })}
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }
