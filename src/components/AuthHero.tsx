@@ -20,7 +20,7 @@ export function AuthHero() {
             <div className="w-3 h-3 bg-white rounded-full" />
           </div>
           <span className="text-xl font-bold tracking-tight text-white">
-            CourtBook
+            EZSport
           </span>
         </div>
 
@@ -49,7 +49,7 @@ export function AuthHero() {
       {/* Bottom Testimonial */}
       <div className="relative z-10 mt-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 max-w-md shadow-xl">
         <p className="text-white/90 italic mb-5 leading-relaxed">
-          "CourtBook completely changed how I play tennis. No more calling clubs
+          "EZSport completely changed how I play tennis. No more calling clubs
           to check availability. I can book a court in 30 seconds from my
           phone."
         </p>
