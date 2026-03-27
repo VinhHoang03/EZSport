@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 export function Footer() {
   return (
     <footer className="bg-white border-t border-brand-border pt-16 pb-8">
@@ -12,7 +12,7 @@ export function Footer() {
                 <div className="w-3 h-3 bg-white rounded-full" />
               </div>
               <span className="text-xl font-bold text-brand-navy tracking-tight">
-                CourtBook
+                EZSport
               </span>
             </div>
             <p className="text-brand-slate mb-6 max-w-sm leading-relaxed">
@@ -21,16 +21,16 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               {/* Social Icons Placeholders */}
-              {['Twitter', 'Instagram', 'Facebook'].map((social) =>
-              <a
-                key={social}
-                href="#"
-                className="w-10 h-10 rounded-full bg-brand-offWhite flex items-center justify-center text-brand-slate hover:bg-brand-coral hover:text-white transition-colors"
-                aria-label={social}>
-                
+              {["Twitter", "Instagram", "Facebook"].map((social) => (
+                <a
+                  key={social}
+                  href="#"
+                  className="w-10 h-10 rounded-full bg-brand-offWhite flex items-center justify-center text-brand-slate hover:bg-brand-coral hover:text-white transition-colors"
+                  aria-label={social}
+                >
                   <div className="w-4 h-4 bg-current rounded-sm" />
                 </a>
-              )}
+              ))}
             </div>
           </div>
 
@@ -41,32 +41,32 @@ export function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Find a Court
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Tournaments
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Cities
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Gift Cards
                 </a>
               </li>
@@ -79,32 +79,32 @@ export function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   List your Court
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Host Resources
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Community Forum
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Trust & Safety
                 </a>
               </li>
@@ -117,32 +117,32 @@ export function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   About Us
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Careers
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Press
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-brand-slate hover:text-brand-coral transition-colors">
-                  
+                  className="text-brand-slate hover:text-brand-coral transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -152,30 +152,30 @@ export function Footer() {
 
         <div className="pt-8 border-t border-brand-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-brand-slate text-sm">
-            © {new Date().getFullYear()} CourtBook, Inc. All rights reserved.
+            © {new Date().getFullYear()} EZSport, Inc. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a
               href="#"
-              className="text-brand-slate hover:text-brand-navy transition-colors">
-              
+              className="text-brand-slate hover:text-brand-navy transition-colors"
+            >
               Privacy
             </a>
             <a
               href="#"
-              className="text-brand-slate hover:text-brand-navy transition-colors">
-              
+              className="text-brand-slate hover:text-brand-navy transition-colors"
+            >
               Terms
             </a>
             <a
               href="#"
-              className="text-brand-slate hover:text-brand-navy transition-colors">
-              
+              className="text-brand-slate hover:text-brand-navy transition-colors"
+            >
               Sitemap
             </a>
           </div>
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 }
