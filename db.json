@@ -1,0 +1,515 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "user@example.com",
+      "password": "password123",
+      "name": "John Doe",
+      "phone": "+1234567890",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=John"
+    },
+    {
+      "id": "2",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "name": "Admin User",
+      "phone": "+0987654321",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Admin"
+    },
+    {
+      "id": "3",
+      "email": "pchanhdn@gmail.com",
+      "password": "chanh123",
+      "name": "Pham Dinh Chanh",
+      "phone": "0931255688",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=PhamDinhChanh"
+    }
+  ],
+  "courts": [
+    {
+      "id": "1",
+      "name": "Grand Slam Tennis Center",
+      "location": "Downtown Metro, Westside",
+      "sport": "Tennis",
+      "price": 45,
+      "rating": 4.9,
+      "reviews": 128,
+      "imageUrl": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80",
+      "description": "Premium tennis facility with professional-grade courts and coaching services",
+      "address": "123 Tennis Ave, Downtown Metro",
+      "phone": "+1-555-0101",
+      "email": "info@grandslamtennis.com",
+      "amenities": [
+        "Professional Courts",
+        "Coaching Service",
+        "Locker Rooms",
+        "Restaurant",
+        "Pro Shop",
+        "Lighting"
+      ],
+      "facilities": [
+        "6 Hard Courts",
+        "2 Clay Courts",
+        "Gym",
+        "Café",
+        "Parking"
+      ],
+      "operatingHours": "6:00 AM - 10:00 PM",
+      "maxPlayers": 4,
+      "surfaceType": "Hard Court / Clay",
+      "availability": "Mon-Sun",
+      "cancellationPolicy": "Free cancellation up to 24 hours before booking",
+      "images": [
+        "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Urban Hoops Arena",
+      "location": "Brooklyn Heights",
+      "sport": "Basketball",
+      "price": 35,
+      "rating": 4.8,
+      "reviews": 94,
+      "imageUrl": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80",
+      "description": "Modern basketball arena with regulation courts and advanced facilities",
+      "address": "456 Hoop St, Brooklyn Heights",
+      "phone": "+1-555-0102",
+      "email": "info@urbanhoops.com",
+      "amenities": [
+        "Professional Courts",
+        "Scoreboard",
+        "Locker Rooms",
+        "Snack Bar",
+        "Lighting"
+      ],
+      "facilities": [
+        "4 Full Courts",
+        "Practice Area",
+        "Gym",
+        "Relaxation Area",
+        "Free Parking"
+      ],
+      "operatingHours": "7:00 AM - 11:00 PM",
+      "maxPlayers": 10,
+      "surfaceType": "Wooden Flooring",
+      "availability": "Mon-Sun",
+      "cancellationPolicy": "Free cancellation up to 12 hours before booking",
+      "images": [
+        "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Sunset Padel Club",
+      "location": "Marina Bay",
+      "sport": "Padel",
+      "price": 55,
+      "rating": 4.9,
+      "reviews": 215,
+      "imageUrl": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80",
+      "description": "Premium padel club with scenic sunset views and professional coaching",
+      "address": "789 Padel Lane, Marina Bay",
+      "phone": "+1-555-0103",
+      "email": "info@sunsetpadel.com",
+      "amenities": [
+        "Professional Coaching",
+        "Restaurant",
+        "Lounge",
+        "Pro Shop",
+        "Lighting",
+        "Sunset Views"
+      ],
+      "facilities": [
+        "8 Padel Courts",
+        "Fitness Center",
+        "Sauna",
+        "Café",
+        "Valet Parking"
+      ],
+      "operatingHours": "8:00 AM - 10:00 PM",
+      "maxPlayers": 4,
+      "surfaceType": "Synthetic Grass",
+      "availability": "Mon-Sun",
+      "cancellationPolicy": "Free cancellation up to 48 hours before booking",
+      "images": [
+        "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "City Center Pitch",
+      "location": "Financial District",
+      "sport": "Football",
+      "price": 80,
+      "rating": 4.7,
+      "reviews": 67,
+      "imageUrl": "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800&q=80",
+      "description": "Professional football pitch in the heart of the city with all facilities",
+      "address": "321 Football Rd, Financial District",
+      "phone": "+1-555-0104",
+      "email": "info@citypitch.com",
+      "amenities": [
+        "Professional Pitch",
+        "Floodlights",
+        "Locker Rooms",
+        "Equipment Rental",
+        "Video Analysis"
+      ],
+      "facilities": [
+        "2 Full Pitches",
+        "Training Area",
+        "Meeting Rooms",
+        "Shower Facilities",
+        "Secure Parking"
+      ],
+      "operatingHours": "8:00 AM - 10:00 PM",
+      "maxPlayers": 22,
+      "surfaceType": "Artificial Turf",
+      "availability": "Mon-Sun",
+      "cancellationPolicy": "Refund available up to 72 hours before booking",
+      "images": [
+        "https://images.unsplash.com/photo-1529900748604-07564a03e7a6?w=800&q=80"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Pro Smash Badminton",
+      "location": "Eastside Complex",
+      "sport": "Badminton",
+      "price": 25,
+      "rating": 4.6,
+      "reviews": 42,
+      "imageUrl": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&q=80",
+      "description": "Dedicated badminton facility with professional courts and equipment",
+      "address": "555 Badminton Way, Eastside Complex",
+      "phone": "+1-555-0105",
+      "email": "info@prosmash.com",
+      "amenities": [
+        "Professional Courts",
+        "Equipment Rental",
+        "Coaching Available",
+        "Locker Rooms",
+        "Lighting"
+      ],
+      "facilities": [
+        "6 Courts",
+        "Practice Area",
+        "Seating",
+        "Parking"
+      ],
+      "operatingHours": "9:00 AM - 9:00 PM",
+      "maxPlayers": 4,
+      "surfaceType": "Wooden Flooring",
+      "availability": "Tue-Sun",
+      "cancellationPolicy": "Free cancellation up to 6 hours before booking",
+      "images": [
+        "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&q=80"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Beachside Volley",
+      "location": "Santa Monica",
+      "sport": "Volleyball",
+      "price": 30,
+      "rating": 4.8,
+      "reviews": 156,
+      "imageUrl": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80",
+      "description": "Beach volleyball courts with stunning ocean views and social atmosphere",
+      "address": "789 Beach Rd, Santa Monica",
+      "phone": "+1-555-0106",
+      "email": "info@beachsidevolley.com",
+      "amenities": [
+        "Beach Courts",
+        "Sunset Views",
+        "Social Events",
+        "Equipment Rental",
+        "Beach Bar"
+      ],
+      "facilities": [
+        "8 Sand Courts",
+        "Shower Facilities",
+        "Lounge Area",
+        "Free Parking"
+      ],
+      "operatingHours": "7:00 AM - 9:00 PM",
+      "maxPlayers": 12,
+      "surfaceType": "Sand",
+      "availability": "Mon-Sun",
+      "cancellationPolicy": "Free cancellation up to 24 hours before booking",
+      "images": [
+        "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Riverside Tennis Courts",
+      "location": "Downtown Metro",
+      "sport": "Tennis",
+      "price": 40,
+      "rating": 4.5,
+      "reviews": 89,
+      "imageUrl": "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80",
+      "description": "Beautiful riverside tennis courts with professional maintenance and coaching",
+      "address": "234 Riverside Dr, Downtown Metro",
+      "phone": "+1-555-0107",
+      "email": "info@riversidetennis.com",
+      "amenities": [
+        "Professional Courts",
+        "River Views",
+        "Coaching Available",
+        "Locker Rooms",
+        "Lighting"
+      ],
+      "facilities": [
+        "4 Hard Courts",
+        "Practice Wall",
+        "Café",
+        "Parking"
+      ],
+      "operatingHours": "7:00 AM - 8:00 PM",
+      "maxPlayers": 4,
+      "surfaceType": "Hard Court",
+      "availability": "Mon-Sun",
+      "cancellationPolicy": "Free cancellation up to 12 hours before booking",
+      "images": [
+        "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Highland Park Hoops",
+      "location": "Westside",
+      "sport": "Basketball",
+      "price": 20,
+      "rating": 4.3,
+      "reviews": 56,
+      "imageUrl": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80",
+      "description": "Community basketball courts with affordable rates and great atmosphere",
+      "address": "100 Park Ave, Westside",
+      "phone": "+1-555-0108",
+      "email": "info@highlandhoops.com",
+      "amenities": [
+        "Community Courts",
+        "Open Play",
+        "Equipment Available",
+        "Outdoor Setting"
+      ],
+      "facilities": [
+        "3 Courts",
+        "Bleachers",
+        "Water Station",
+        "Parking"
+      ],
+      "operatingHours": "8:00 AM - 10:00 PM",
+      "maxPlayers": 10,
+      "surfaceType": "Asphalt",
+      "availability": "Mon-Sun",
+      "cancellationPolicy": "Free cancellation anytime",
+      "images": [
+        "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Premier Padel Courts",
+      "location": "Downtown",
+      "sport": "Padel",
+      "price": 50,
+      "rating": 4.7,
+      "reviews": 103,
+      "imageUrl": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80",
+      "description": "Top-tier padel facility with international tournament standards",
+      "address": "999 Padel Blvd, Downtown",
+      "phone": "+1-555-0109",
+      "email": "info@premierpadel.com",
+      "amenities": [
+        "Tournament Courts",
+        "Professional Coaching",
+        "Café",
+        "Locker Rooms"
+      ],
+      "facilities": [
+        "6 Padel Courts",
+        "Pro Shop",
+        "Seating Area",
+        "Parking"
+      ],
+      "operatingHours": "8:00 AM - 11:00 PM",
+      "maxPlayers": 4,
+      "surfaceType": "Synthetic Grass",
+      "availability": "Mon-Sun",
+      "cancellationPolicy": "Free cancellation up to 36 hours before booking",
+      "images": [
+        "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=800&q=80"
+      ]
+    }
+  ],
+  "sports": [
+    {
+      "id": "1",
+      "name": "Tennis",
+      "count": "124 courts"
+    },
+    {
+      "id": "2",
+      "name": "Basketball",
+      "count": "86 courts"
+    },
+    {
+      "id": "3",
+      "name": "Padel",
+      "count": "45 courts"
+    },
+    {
+      "id": "4",
+      "name": "Football",
+      "count": "92 courts"
+    },
+    {
+      "id": "5",
+      "name": "Badminton",
+      "count": "38 courts"
+    },
+    {
+      "id": "6",
+      "name": "Volleyball",
+      "count": "24 courts"
+    }
+  ],
+  "favorites": [
+    {
+      "id": "1",
+      "userId": "1",
+      "courtId": "1",
+      "courtName": "Grand Slam Tennis Center",
+      "addedAt": "2026-03-26T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "courtId": "3",
+      "courtName": "Sunset Padel Club",
+      "addedAt": "2026-03-26T11:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "courtId": "4",
+      "courtName": "City Center Pitch",
+      "addedAt": "2026-03-26T12:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "courtId": "2",
+      "courtName": "Urban Hoops Arena",
+      "addedAt": "2026-03-26T13:00:00.000Z"
+    }
+  ],
+  "filterOptions": {
+    "sports": [
+      "Tennis",
+      "Basketball",
+      "Padel",
+      "Football",
+      "Badminton",
+      "Volleyball"
+    ],
+    "locations": [
+      "Downtown",
+      "Westside",
+      "Brooklyn",
+      "Marina Bay",
+      "Financial District",
+      "Santa Monica",
+      "Downtown Metro",
+      "Brooklyn Heights",
+      "Eastside Complex"
+    ]
+  },
+  "bookings": [
+    {
+      "id": "1",
+      "userId": "1",
+      "courtId": "7",
+      "date": "2026-03-28",
+      "time": "09:00",
+      "duration": 4,
+      "totalPrice": 160,
+      "createdAt": "2026-03-26T18:11:15.607Z"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "courtId": "1",
+      "date": "2026-03-29",
+      "time": "09:00",
+      "duration": 4,
+      "totalPrice": 180,
+      "createdAt": "2026-03-26T18:11:46.985Z"
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "courtId": "1",
+      "date": "2026-03-31",
+      "time": "09:00",
+      "duration": 4,
+      "totalPrice": 180,
+      "createdAt": "2026-03-26T18:12:21.382Z"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "courtId": "8",
+      "date": "2026-03-28",
+      "time": "09:00",
+      "duration": 1,
+      "totalPrice": 20,
+      "createdAt": "2026-03-26T18:12:33.663Z"
+    },
+    {
+      "id": "5",
+      "userId": "1",
+      "courtId": "1",
+      "date": "2026-03-28",
+      "time": "09:00",
+      "duration": 1,
+      "totalPrice": 45,
+      "createdAt": "2026-03-26T18:29:11.997Z"
+    },
+    {
+      "id": "6",
+      "userId": "1",
+      "courtId": "1",
+      "date": "2026-03-31",
+      "time": "09:00",
+      "duration": 1,
+      "totalPrice": 45,
+      "createdAt": "2026-03-26T18:36:32.530Z"
+    },
+    {
+      "id": "7",
+      "userId": "1",
+      "courtId": "1",
+      "date": "2026-03-31",
+      "time": "09:00",
+      "duration": 1,
+      "totalPrice": 45,
+      "createdAt": "2026-03-26T18:41:45.135Z"
+    },
+    {
+      "userId": "3",
+      "courtId": "1",
+      "date": "2026-03-26",
+      "time": "09:00",
+      "duration": 1,
+      "totalPrice": 45,
+      "createdAt": "2026-03-26T18:49:07.634Z",
+      "id": "qkO5TOxlhMY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
