@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 export function CTABanner() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -7,19 +7,19 @@ export function CTABanner() {
         className="relative rounded-3xl overflow-hidden bg-brand-navy shadow-2xl"
         initial={{
           opacity: 0,
-          scale: 0.95
+          scale: 0.95,
         }}
         whileInView={{
           opacity: 1,
-          scale: 1
+          scale: 1,
         }}
         viewport={{
-          once: true
+          once: true,
         }}
         transition={{
-          duration: 0.5
-        }}>
-        
+          duration: 0.5,
+        }}
+      >
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-96 h-96 bg-brand-coral rounded-full blur-[128px] opacity-40" />
         <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-brand-teal rounded-full blur-[128px] opacity-30" />
@@ -29,7 +29,7 @@ export function CTABanner() {
             Ready to hit the court?
           </h2>
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl">
-            Join CourtBook today and get 10% off your first booking. No
+            Join EZSport today and get 10% off your first booking. No
             subscription required.
           </p>
 
@@ -43,6 +43,6 @@ export function CTABanner() {
           </div>
         </div>
       </motion.div>
-    </section>);
-
+    </section>
+  );
 }

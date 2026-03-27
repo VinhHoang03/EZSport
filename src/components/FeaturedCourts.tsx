@@ -1,9 +1,42 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { CourtCard } from "./CourtCard";
-import { MOCK_COURTS } from "../data/mockData";
+import { getAllCourts } from "../api/client";
 
-export function FeaturedCourts() {
-  const featuredCourts = MOCK_COURTS.slice(0, 6);
+interface Court {
+  id: string;
+  name: string;
+  location: string;
+  sport: string;
+  price: number;
+  rating: number;
+  reviews: number;
+  imageUrl: string;
+}
+
+export function FeaturedCourts({
+  onCourtClick,
+}: {
+  onCourtClick?: (court: Court) => void;
+}) {
+  const [courts, setCourts] = useState<Court[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCourts = async () => {
+      try {
+        setLoading(true);
+        const data = await getAllCourts();
+        setCourts(data.slice(0, 6));
+      } catch (error) {
+        console.error("Failed to fetch courts:", error);
+        setCourts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCourts();
+  }, []);
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -22,11 +55,30 @@ export function FeaturedCourts() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        {featuredCourts.map((court) => (
-          <CourtCard key={court.id} {...court} />
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex justify-center py-12">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-brand-coral"></div>
+            <p className="text-brand-slate mt-3">Loading featured courts...</p>
+          </div>
+        </div>
+      ) : courts.length === 0 ? (
+        <div className="text-center py-12">
+          <p className="text-brand-slate">No courts available</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {courts.map((court) => (
+            <div
+              key={court.id}
+              onClick={() => onCourtClick?.(court)}
+              className="cursor-pointer"
+            >
+              <CourtCard {...court} />
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
