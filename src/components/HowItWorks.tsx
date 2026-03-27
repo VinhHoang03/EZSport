@@ -1,25 +1,25 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SearchIcon, CalendarIcon, TrophyIcon } from 'lucide-react';
+import { motion } from "framer-motion";
+import { SearchIcon, CalendarIcon, TrophyIcon } from "lucide-react";
 const STEPS = [
-{
-  icon: SearchIcon,
-  title: 'Search',
-  description:
-  'Find courts near you by sport, location, and time. Filter by price and amenities.'
-},
-{
-  icon: CalendarIcon,
-  title: 'Book',
-  description:
-  'Reserve your slot instantly with secure booking. No phone calls required.'
-},
-{
-  icon: TrophyIcon,
-  title: 'Play',
-  description:
-  'Show up, unlock the court with your digital pass, and enjoy your game.'
-}];
+  {
+    icon: SearchIcon,
+    title: "Search",
+    description:
+      "Find courts near you by sport, location, and time. Filter by price and amenities.",
+  },
+  {
+    icon: CalendarIcon,
+    title: "Book",
+    description:
+      "Reserve your slot instantly with secure booking. No phone calls required.",
+  },
+  {
+    icon: TrophyIcon,
+    title: "Play",
+    description:
+      "Show up, unlock the court with your digital pass, and enjoy your game.",
+  },
+];
 
 export function HowItWorks() {
   return (
@@ -46,19 +46,19 @@ export function HowItWorks() {
               className="relative z-10 flex flex-col items-center text-center"
               initial={{
                 opacity: 0,
-                y: 20
+                y: 20,
               }}
               whileInView={{
                 opacity: 1,
-                y: 0
+                y: 0,
               }}
               viewport={{
-                once: true
+                once: true,
               }}
               transition={{
-                delay: index * 0.2
-              }}>
-              
+                delay: index * 0.2,
+              }}
+            >
               <div className="w-24 h-24 bg-white rounded-full border-4 border-brand-offWhite shadow-lg flex items-center justify-center mb-6 relative group">
                 <div className="absolute inset-0 bg-brand-coral rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out opacity-10" />
                 <Icon className="w-10 h-10 text-brand-coral" />
@@ -75,10 +75,10 @@ export function HowItWorks() {
               <p className="text-brand-slate leading-relaxed">
                 {step.description}
               </p>
-            </motion.div>);
-
+            </motion.div>
+          );
         })}
       </div>
-    </section>);
-
+    </section>
+  );
 }
